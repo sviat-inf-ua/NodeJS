@@ -1,0 +1,52 @@
+<!Doctype HTML>
+<html>
+<head>                                      
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
+</head>
+<body ng-app="app">
+    <!-- <div class="container">
+        <h1>Recents Posts</h1>
+        <ul class="list-group-item">
+            <li>
+            <strong>@samxxx</strong>
+            <span>Node Rules!</span>
+        </li>
+        <li class="list-group-item">
+            <strong>@tomxxx</strong>
+            <span>Trying Angular!</span>
+        </li>
+        </ul>
+    </div> -->
+    <div class="container" ng-controller="PostCtrl">
+            <h1>Recents Posts</h1>
+           <!-- {{posts}}<br>
+           {{posts[0].body}} -->
+
+           <form role="form">
+               <div class="form-group">
+                   <div class="input-group">
+                      username: <input ng-model="postBody" class="form-control"/>
+                      body: <input ng-model="postBody1" class="form-control"/>
+                       <span class="input-type-btn">
+                           <button ng-click="addPost()" class="btn btn-default">Add post</button>
+                       </span>
+                   </div>
+               </div>
+           </form>
+
+
+
+
+           
+           <ul class="list-group-item" >
+                <li ng-repeat="post in posts">
+                    <strong>{{post.username}}</strong>
+                    <span>{{post.body}}</span>
+                </li>
+            </ul>
+    
+            <script type="text/javascript" src="C:\SocialApp(Node Js)\SociaoUI\SocialAPI\asserts\app.js"/>
+   
+</body>
+</html>
